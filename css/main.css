@@ -1,0 +1,153 @@
+@import "header.css";
+body{
+    background-size: cover;
+    background-image: url("../img/background-image.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.main{
+    font-family: "fantasy";
+    font-size: 20px;
+    background: #777684;
+    width: 65%;
+    margin: auto;
+    text-align: center;
+    border: solid ;
+    height: auto;
+    min-height: 1000px;
+
+}
+canvas{
+    border-bottom: #32343d solid 2px ;
+    box-shadow: 0px 0px 20px 7px rgba(0,0,0,0.8);
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+/*upper css style is ready*/
+
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+/*params*/
+.params-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+}
+.params-container label{
+    margin-right: 40px;
+    font-size: 25px;
+
+}
+#choose-x button{
+    padding: 8px 15px 8px 15px;
+    min-width: 40px;
+    border: none;
+    box-shadow: 0px 0px 5px black;
+    border-radius: 8px;
+    text-align: center;
+    background: rgba(82,97,100,0.64);
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+}
+
+
+#choose-x button.active{
+    background-color: #32343d;
+    color: white;
+
+}
+input:focus {
+    box-shadow: 0 0 10px black;
+}
+.choose-params{
+    text-align: center;
+    padding:20px 20px;
+}
+.choose-params label{
+    width: auto;
+    white-space: nowrap;
+    justify-content: center;
+
+}
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background: rgba(82,97,100,0.64);
+    color: white;
+}
+#send-form{
+    justify-content: center;
+
+}
+#sendButton{
+    background-color: rgba(82,97,100,0.64);
+    color: #fff;
+    padding: 10px 20px;
+    border: white solid 1px;
+    cursor: pointer;
+    border-radius: 7px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+#sendButton:hover{
+    background-color: #32343d;
+    color: #eee;
+}
+input{
+    background: rgba(82,97,100,0.64);
+    padding: 10px; /* добавляет внутренний отступ для текста */
+    border: 1px solid #ccc; /* добавляет границу */
+    border-radius: 5px; /* скругляет углы */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* добавляет тень */
+    font-size: 16px; /* устанавливает размер шрифта */
+    color: white;
+}
+input::placeholder{
+    color: #888;
+}
+label::before{
+    content: "→";
+}
+
+
+/*params*/
+
+
+
+
+
+
+/*table*/
+
+.table{
+    text-align: left;
+    border-spacing: 10px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table-container{
+    max-height: 300px;
+    overflow: auto;
+}
+td{
+    border: #32343d 1.5px solid;
+}
+
+

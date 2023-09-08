@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Lab1Ser</title>
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+</head>
+<body>
+	<header class="header">
+		<div>
+			<span>
+				Shornikov Sergey 369078 Variant 2100
+			</span>
+		</div>
+	</header>
+	<div class="main">
+		<div class="container">
+			<canvas id="canvas" width="600" height="500">
+				<!--сюда надо припилить график-->
+
+
+			</canvas>
+
+			<div class="choose-params">
+
+				<div class="params-container" >
+					<label id="label-x">x = 0</label>
+					<div id="choose-x">
+						<button type="button" id="b1" value="-4" onclick="set_X(id)">-4</button>
+						<button type="button" id="b2" value="-3" onclick="set_X(id)">-3</button>
+						<button type="button" id="b3" value="-2" onclick="set_X(id)">-2</button>
+						<button type="button" id="b4" value="-1" onclick="set_X(id)">-1</button>
+						<button type="button" id="b5" value="0" onclick="set_X(id)">0</button>
+						<button type="button" id="b6" value="1" onclick="set_X(id)">1</button>
+						<button type="button" id="b7" value="2" onclick="set_X(id)">2</button>
+						<button type="button" id="b8" value="3" onclick="set_X(id)">3</button>
+						<button type="button" id="b9" value="4" onclick="set_X(id)">4</button>
+					</div>
+
+				</div>
+				<div class="params-container">
+					<div id="choose-y">
+						<label id="label-y">y = </label>
+						<input type="text" id="input-y" placeholder="Введите число">
+					</div>
+				</div>
+
+				<div class="params-container">
+					<div id="choose-r">
+						<label id="label-r">r = 1</label>
+						<select id="select-r" onchange="selectR()">
+							<option value="1" id="sel_1">1</option>
+							<option value="2" id="sel_2" selected>2</option>
+							<option value="3" id="sel_3">3</option>
+							<option value="4" id="sel_4">4</option>
+							<option value="5" id="sel_5">5</option>
+						</select>
+					</div>
+				</div>
+
+				<div id="send-form" class="params-container">
+					<form action="server.php" method="get">
+						<button type="button" id="sendButton">
+							ввод параметров
+						</button>
+					</form>
+				</div>
+			</div>
+
+
+		</div>
+
+
+
+		<div class="table-container">
+			<table class="table" id="result-table">
+				<thead>
+					<td>X</td>
+					<td>Y</td>
+					<td>R</td>
+					<td>RESULT</td>
+					<td>Current time</td>
+					<td>Computation time</td>
+				</thead>
+				<tbody id="table_out">
+				</tbody>
+			</table>
+		</div>
+		<script src="js/validation.js"></script>
+		<script src="js/canvas.js"></script>
+		<script src="js/sendData.js"></script>
+		<script src="js/addToTable.js"></script>
+		<script src="js/changeStyles.js"></script>
+	</div>
+</body>
+
+</html>
