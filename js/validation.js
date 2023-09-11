@@ -3,7 +3,7 @@ let button = document.getElementById("sendButton");
 let flag = false;
 let userInputY = 0;
 let userInputX = 0;
-let userInputR = 1;
+let userInputR = 2;
 
 function selectR () {
     userInputR = document.getElementById("select-r")

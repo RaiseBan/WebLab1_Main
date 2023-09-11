@@ -1,31 +1,45 @@
 <?php
 $start_time = microtime();
+$flag = true;
 if ($_SERVER['REQUEST_METHOD'] === 'GET'){
     $response = '';
-    $out = '';
+    $res = '';
     $x = $_GET['x'];
     $y = $_GET['y'];
     $r = $_GET['r'];
 
-    if ((($x * $x + $y * $y) <= $r * $r / 4 && $x <= 0 && $y >= 0) ||
-        (-2 * $y - $x <= $r  && $x <= 0 && $y <= 0) ||
-        ($x >= 0 && $y <= 0 && $x <= (-1) * $r / 2 && $y >= (-1) * $r)) {
-        $out = "Входит";
-    } else {
-        $out = "Не входит";
+    if ($x < -4 || $x > 4)
+        $flag = false;
+    if ($y < -3 || $y > 3)
+        $flag = false;
+    if ($r < 1 || $r > 5)
+        $flag = false;
+
+    if ($flag){
+        if ((($x * $x + $y * $y) <= $r * $r / 4 && $x <= 0 && $y >= 0) ||
+            (-2 * $y - $x <= $r  && $x <= 0 && $y <= 0) ||
+            ($x >= 0 && $y <= 0 && $x <= (-1) * $r / 2 && $y >= (-1) * $r)) {
+            $res = "Входит";
+        } else {
+            $res = "Не входит";
+        }
     }
-    $response .= $x;
-    $response .= ';';
-    $response .= $y;
-    $response .= ';';
-    $response .= $r;
-    $response .= ';';
-    $response .= $out;
-    $response .= ';';
-    $response .= date("Y-m-d H:i:s");
-    $response .= ';';
-    $response .= $start_time;
-    $response .= '/';
+
+    if ($flag){
+        $response .= $x;
+        $response .= ';';
+        $response .= $y;
+        $response .= ';';
+        $response .= $r;
+        $response .= ';';
+        $response .= $res;
+        $response .= ';';
+        $response .= date("Y-m-d H:i:s");
+        $response .= ';';
+        $response .= $start_time;
+        $response .= '/';
+    }
+
     echo $response;
 
 
