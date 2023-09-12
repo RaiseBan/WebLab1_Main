@@ -42,7 +42,7 @@ function draw() {
     ctx.clearRect(0, 0, 1000, 1000);
 
     ctx.beginPath();
-    ctx.fillStyle = "rgba(91,95,201,1)";
+    ctx.fillStyle = "rgba(249,192,116,256)";
     ctx.fillRect(widthCenter, heightCenter, 50, 100);
 
     ctx.moveTo(widthCenter, heightCenter);
