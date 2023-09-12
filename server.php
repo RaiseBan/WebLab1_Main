@@ -7,13 +7,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET'){
     $x = $_GET['x'];
     $y = $_GET['y'];
     $r = $_GET['r'];
+    if ((!is_int($x)) && ($x < -4 || $x > 4)){
+        $flag = false;
+    }
 
-    if ($x < -4 || $x > 4)
+    if ((!is_numeric($y)) && ($y < -3 || $y > 3)){
         $flag = false;
-    if ($y < -3 || $y > 3)
+    }
+    if ((!is_int($y)) && ($r < 1 || $r > 5)){
         $flag = false;
-    if ($r < 1 || $r > 5)
-        $flag = false;
+    }
 
     if ($flag){
         if ((($x * $x + $y * $y) <= $r * $r / 4 && $x <= 0 && $y >= 0) ||
