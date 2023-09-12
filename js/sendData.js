@@ -4,7 +4,7 @@ function sendData(){
     xhr.open("GET", "server.php?" + "x=" + userInputX + "&y=" + userInputY + "&r=" + userInputR);
     xhr.send();
     xhr.onreadystatechange = function (){
-        if (xhr.readyState === XMLHttpRequest.DONE){
+        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200){
             if (Cookies.get("input_data") !== undefined){
                 cookies_data = Cookies.get("input_data");
             }

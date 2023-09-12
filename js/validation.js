@@ -23,8 +23,7 @@ function checkY (){
     if(!/^-?\d{1}(\.|,)?\d*$/i.test(userInputY.value)){
 
         flag = false
-        alert("мужик, ну не подходит чиселко")
-        alert(userInputY.value);
+        alert("ну не, не подходит чиселко")
     }else{
         let temp = userInputY.value.replace(/,/, ".")
         if (temp >= -5 && temp <= 5){
@@ -33,7 +32,7 @@ function checkY (){
             userInputY = userInputY.value;
         }else{
             flag = false
-            alert("Значение Y не валидно");
+            alert("Значение Y не валидно [-5; 5]");
         }
     }
 

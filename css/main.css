@@ -9,42 +9,49 @@ body{
     font-family: "fantasy";
     font-size: 20px;
     background: #777684;
-    width: 80%;
+    width: 80vw;
+    min-width: auto;
     margin: auto;
     text-align: center;
     border: solid ;
     height: auto;
-    min-height: 100vh;
+    min-height: 80vh;
 }
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Выравнивание по центру по вертикали */
-    height: 500px;
-    width: 100%;
-    overflow: hidden; /* Обрезать содержимое, если оно выходит за пределы контейнера */
-}
+.div-canvas{
+    border-bottom: #888888 groove;
 
-.params-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin: 15px;
-    width: auto ; /* Занимает всю ширину контейнера */
 }
 
 canvas {
-    border-bottom: #32343d solid 2px;
     box-shadow: 0px 0px 20px 7px rgba(0,0,0,0.8);
     max-width: 100%; /* Максимальная ширина не превышает ширину родительского контейнера */
     max-height: 100%; /* Максимальная высота не превышает высоту родительского контейнера */
     width: auto; /* Автоматический расчет ширины для сохранения соотношения сторон */
     height: auto; /* Автоматический расчет высоты для сохранения соотношения сторон */
+    margin-bottom: 2vh;
+}
+
+.choose-params{
+    justify-content: center;
+    text-align: center;
+    padding:20px 20px;
+    margin: 0 20%;
+
+
+}
+.params-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin-bottom: 3vh;
+
 }
 
 .params-container label{
     margin-right: 40px;
-    font-size: 25px;
+    font-size: 1.2em;
+    white-space: nowrap;
 
 }
 #choose-x button{
@@ -56,7 +63,7 @@ canvas {
     border-radius: 8px;
     text-align: center;
     background: rgba(82,97,100,0.64);
-    font-size: 16px;
+    font-size: 14px;
     color: white;
     cursor: pointer;
 }
@@ -70,16 +77,8 @@ canvas {
 input:focus {
     box-shadow: 0 0 10px black;
 }
-.choose-params{
-    text-align: center;
-    padding:20px 20px;
-}
-.choose-params label{
-    width: auto;
-    white-space: nowrap;
-    justify-content: center;
 
-}
+
 select {
     padding: 10px;
     border: 1px solid #ccc;
@@ -89,7 +88,7 @@ select {
     color: white;
 }
 #send-form{
-    justify-content: center;
+    justify-content: flex-start;
 
 }
 #sendButton{
