@@ -24,7 +24,7 @@ canvas {
     margin-bottom: 2vh;
 }
 
-.choose-params{
+.sendForm{
     text-align: center;
     padding: 20px;
     margin: 0 20%;
@@ -67,6 +67,7 @@ select {
     border-radius: 5px;
     background: rgba(82,97,100,0.64);
     color: white;
+    cursor: pointer;
 }
 
 #sendButton{
@@ -77,6 +78,7 @@ select {
     border-radius: 7px;
     font-size: 16px;
     transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
 }
 
 #sendButton:hover{
