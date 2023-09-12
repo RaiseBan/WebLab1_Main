@@ -1,7 +1,7 @@
 @import "header.css";
 body{
-    background-size: cover;
     background-image: url("../img/background-image.jpg");
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -10,117 +10,96 @@ body{
     font-size: 20px;
     background: #777684;
     width: 80vw;
-    min-width: auto;
     margin: auto;
     text-align: center;
-    border: solid ;
-    height: auto;
+    border: solid;
     min-height: 80vh;
 }
 .div-canvas{
     border-bottom: #888888 groove;
-
 }
 
 canvas {
     box-shadow: 0px 0px 20px 7px rgba(0,0,0,0.8);
-    max-width: 100%; /* Максимальная ширина не превышает ширину родительского контейнера */
-    max-height: 100%; /* Максимальная высота не превышает высоту родительского контейнера */
-    width: auto; /* Автоматический расчет ширины для сохранения соотношения сторон */
-    height: auto; /* Автоматический расчет высоты для сохранения соотношения сторон */
     margin-bottom: 2vh;
 }
 
 .choose-params{
-    justify-content: center;
     text-align: center;
-    padding:20px 20px;
+    padding: 20px;
     margin: 0 20%;
-
-
 }
+
 .params-container{
     display: flex;
-    justify-content: flex-start;
     align-items: center;
-
     margin-bottom: 3vh;
-
 }
 
 .params-container label{
     margin-right: 40px;
     font-size: 1.2em;
     white-space: nowrap;
-
 }
+
 #choose-x button{
-    padding: 8px 15px 8px 15px;
-    min-width: 40px;
+    padding: 8px 15px;
     margin: 4px 1.5px 0 0;
     border: none;
     box-shadow: 0px 0px 5px black;
     border-radius: 8px;
-    text-align: center;
     background: rgba(82,97,100,0.64);
-    font-size: 14px;
     color: white;
     cursor: pointer;
 }
 
-
 #choose-x button.active{
     background-color: #32343d;
-    color: white;
-
 }
+
 input:focus {
     box-shadow: 0 0 10px black;
 }
-
 
 select {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
     background: rgba(82,97,100,0.64);
     color: white;
 }
-#send-form{
-    justify-content: flex-start;
 
-}
 #sendButton{
     background-color: rgba(82,97,100,0.64);
-    color: #fff;
+    color: white;
     padding: 10px 20px;
-    border: white solid 1px;
-    cursor: pointer;
+    border: 1px solid white;
     border-radius: 7px;
     font-size: 16px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 #sendButton:hover{
     background-color: #32343d;
     color: #eee;
 }
-input{
+
+input {
     background: rgba(82,97,100,0.64);
-    padding: 10px; /* добавляет внутренний отступ для текста */
-    border: 1px solid #ccc; /* добавляет границу */
-    border-radius: 5px; /* скругляет углы */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* добавляет тень */
-    font-size: 16px; /* устанавливает размер шрифта */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
     color: white;
 }
+
 input::placeholder{
     color: #888;
 }
+
 label::before{
     content: "→";
 }
-
 
 .table{
     text-align: left;
@@ -133,8 +112,8 @@ label::before{
     max-height: 300px;
     overflow: auto;
 }
+
 td{
     border: #32343d 1.5px solid;
 }
-
 
