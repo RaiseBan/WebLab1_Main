@@ -9,12 +9,14 @@ function selectR () {
     userInputR = document.getElementById("select-r")
         .options[document.getElementById("select-r")
         .options.selectedIndex].value;
+    console.log("r" + userInputR);
     document.getElementById("label-r").innerText = "r = " + userInputR;
     draw();
 }
 function set_X(id){
     userInputX = document.getElementById(id).value;
     document.getElementById("label-x").innerText = "x = " + userInputX;
+    console.log("x" + userInputX);
 
 }
 
@@ -30,6 +32,7 @@ function checkY (){
             flag = true;
             document.getElementById("label-y").innerText = "y = " + temp;
             userInputY = userInputY.value;
+            console.log("y" + userInputY);
         }else{
             flag = false
             alert("Значение Y не валидно [-5; 5]");
@@ -37,7 +40,8 @@ function checkY (){
     }
 
 }
-button.onclick = function (){
+button.onclick = function (event){
+    event.preventDefault();
     checkY();
     if (flag){
         sendData();
