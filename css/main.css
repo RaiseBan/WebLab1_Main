@@ -80,7 +80,22 @@ select {
     transition: background-color 0.3s ease, color 0.3s ease;
     cursor: pointer;
 }
+#clear-button{
+    background-color: #ff3a33;
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 7px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    margin-left: 5px;
+}
+#clear-button:hover{
+    background-color: #ff7348;
+    color: #eee;
 
+}
 #sendButton:hover{
     background-color: #32343d;
     color: #eee;
