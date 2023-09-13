@@ -14,7 +14,7 @@ function selectR () {
     draw();
 }
 function set_X(id){
-    userInputX = document.getElementById(id).value;
+    userInputX = parseInt(document.getElementById(id).value);
     document.getElementById("label-x").innerText = "x = " + userInputX;
     console.log("x" + userInputX);
 
@@ -22,11 +22,16 @@ function set_X(id){
 
 function checkY (){
     userInputY = document.getElementById("input-y");
-
-    if(isNaN(userInputY.value)){
+    if(isNaN(userInputY.value) || userInputY.value === ''){
 
         flag = false
-        alert("ну не, не подходит чиселко")
+        Toastify({
+            text: "ну не, не подходит чиселко",
+            duration: 2000,
+            style:{
+                background: "grey"
+            }
+        }).showToast();
     }else{
         if (userInputY.value > -3 && userInputY.value <= 3){
             flag = true;
@@ -35,7 +40,13 @@ function checkY (){
             console.log("y" + userInputY);
         }else{
             flag = false
-            alert("Значение Y не валидно (-3; 3)");
+            Toastify({
+                text: "Значение Y не валидно (-3; 3)",
+                duration: 2000,
+                style:{
+                    background: "grey"
+                }
+            }).showToast();
         }
     }
 
