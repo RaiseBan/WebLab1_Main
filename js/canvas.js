@@ -13,10 +13,6 @@ ctx.clearRect(0, 0, 1000, 1000);
 
 let widthCenter = canvas.width / 2;
 let heightCenter = canvas.height / 2;
-let topY = heightCenter - 125;
-let bottomY = heightCenter + 125;
-let leftX = widthCenter - 125;
-let rightX = widthCenter + 125;
 
 draw();
 //рисуем квадрат
@@ -31,8 +27,8 @@ function drawPoint(){
         ctx.fillStyle = "red";
         ctx.beginPath();
         // ctx.moveTo(widthCenter, heightCenter);
-        console.log(userInputX, userInputY, userInputR);
-        ctx.arc(widthCenter + 100 * userInputX / userInputR, heightCenter - 100 * parseInt(userInputY) / userInputR, 3, 0, 2 * Math.PI);        ctx.closePath();
+        console.log("то что рисуем" + userInputX, userInputY, userInputR);
+        ctx.arc(widthCenter + 100 * userInputX / userInputR, heightCenter - 100 * parseFloat(userInputY) / userInputR, 3, 0, 2 * Math.PI);        ctx.closePath();
         ctx.fill();
 
     }

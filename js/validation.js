@@ -22,20 +22,20 @@ function set_X(id){
 
 function checkY (){
     userInputY = document.getElementById("input-y");
-    if(!/^-?\d{1}(\.|,)?\d*$/i.test(userInputY.value)){
+
+    if(isNaN(userInputY.value)){
 
         flag = false
         alert("ну не, не подходит чиселко")
     }else{
-        let temp = userInputY.value.replace(/,/, ".")
-        if (temp >= -5 && temp <= 5){
+        if (userInputY.value > -3 && userInputY.value <= 3){
             flag = true;
-            document.getElementById("label-y").innerText = "y = " + temp;
+            document.getElementById("label-y").innerText = "y = " + userInputY.value;
             userInputY = userInputY.value;
             console.log("y" + userInputY);
         }else{
             flag = false
-            alert("Значение Y не валидно [-5; 5]");
+            alert("Значение Y не валидно (-3; 3)");
         }
     }
 
