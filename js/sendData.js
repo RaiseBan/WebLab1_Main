@@ -19,7 +19,13 @@ function sendData() {
 }
 function phpResponse(answer) {
     if (answer.split("/")[0].split(";")[0] === "") {
-        alert("Отправленные данные не корректны");
+        Toastify({
+            text: "Отправленные данные неверные",
+            duration: 2000,
+            style:{
+                background: "grey"
+            }
+        }).showToast();
         return null;
     }else {
         drawPoint();
