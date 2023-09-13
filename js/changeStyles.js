@@ -13,3 +13,16 @@ buttonsInDiv.forEach(button => {
         button.classList.add('active');
     });
 });
+
+let clearButton = document.getElementById("clear-button");
+clearButton.onclick = function (){
+    localStorage.clear();
+    location.reload();
+    Toastify({
+        text: "отчистка успешна",
+        duration: 2000,
+        style:{
+            background: "green"
+        }
+    }).showToast();
+}
