@@ -18,7 +18,13 @@ draw();
 //рисуем квадрат
 function drawPoint(){
     if ( Math.abs(userInputY) > userInputR || Math.abs(userInputX) > userInputR){
-        alert("выход за границы графика");
+        Toastify({
+            text: "выход за границы графика",
+            duration: 2000,
+            style:{
+                background: "grey"
+            }
+        }).showToast();
         draw();
     }
     else{
