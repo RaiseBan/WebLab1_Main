@@ -5,6 +5,7 @@
     <title>Lab1Ser</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="shortcut icon" href="img/SmileFace.ico" type="image/png">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <!--    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>-->
 </head>
 <body>
@@ -49,7 +50,7 @@
                 <div class="params-container">
                     <div id="choose-y">
                         <label id="label-y" for="input-y">y = </label>
-                        <input type="text" id="input-y" name="y" placeholder="Input value">
+                        <input type="text" id="input-y" name="y" placeholder="Input value" maxlength="6">
                     </div>
                 </div>
 
@@ -68,6 +69,7 @@
 
                 <div class="params-container">
                     <input type="submit" id="sendButton" value="Send data">
+                    <button type="button" id="clear-button">Clear table</button>
                 </div>
 
             </form>
@@ -93,6 +95,8 @@
         <script src="js/sendData.js"></script>
         <script src="js/addToTable.js"></script>
         <script src="js/changeStyles.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+        <script src="js/alert.js"></script>
     </div>
 </body>
 </html>
