@@ -19,11 +19,16 @@ draw();
 function drawPoint(){
     if ( Math.abs(userInputY) > userInputR || Math.abs(userInputX) > userInputR){
         Toastify({
-            text: "выход за границы графика",
-            duration: 2000,
-            style:{
-                background: "grey"
-            }
+            text: "Выход за границы графика",
+            duration: 3000,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "left", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+                background: "linear-gradient(to right, #6e8580, #0c2b2a)",
+            },
+            onClick: function(){} // Callback after click
         }).showToast();
         draw();
     }

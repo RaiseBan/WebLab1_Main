@@ -47,10 +47,15 @@ function checkY (){
             flag = false
             Toastify({
                 text: "Значение Y не валидно (-3; 3)",
-                duration: 2000,
-                style:{
-                    background: "grey"
-                }
+                duration: 3000,
+                close: true,
+                gravity: "top", // `top` or `bottom`
+                position: "left", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {
+                    background: "linear-gradient(to right, #6e8580, #0c2b2a)",
+                },
+                onClick: function(){} // Callback after click
             }).showToast();
         }
     }
